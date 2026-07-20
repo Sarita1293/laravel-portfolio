@@ -1,2 +1,2 @@
 
-This file contains changes after resolving merge conflict.
+Change from main branch for conflict testing.
