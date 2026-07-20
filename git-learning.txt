@@ -1,2 +1,1 @@
-
-Change from main branch for conflict testing.
+Change from main branch and feature branch after conflict resolution.
