@@ -28,18 +28,21 @@
                                 <th>ID</th>
                                 <th>Icon</th>
                                 <th>Title</th>
-                                <th>Discription</th>
+                                <th>Description</th>
+                                <th>Display Order</th>
                                 <th>Status</th>
                                 <th width="170">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($services as $service)
+                            
                             <tr>
                                 <td>{{ $service->id }}</td>
                                 <td>{{ $service->icon }}</td>
                                 <td>{{ $service->title }}</td> 
-                                <td>{{ $service->discription }}</td>                               
+                                <td>{{ $service->description }}</td> 
+                                <td>{{ $service->display_order }}</td>                              
                                 <td>{{ $service->status }}</td>
                                 <td>
                                     @can('update', $service)

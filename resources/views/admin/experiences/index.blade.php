@@ -36,6 +36,7 @@
                         <th>Roles and Responsibilities</th>
                         <th>Currently Working</th>
                         <th>Location</th>
+                        <th>Display Order</th>
                         <th>Status</th>
                         <th width="170">Action</th>
                     </tr>
@@ -55,6 +56,7 @@
                             <td>{{ $experience->roles_and_responsibilities }}</td>
                             <td>{{ $experience->currently_working }}</td>
                             <td>{{ $experience->location }}</td>
+                            <td>{{ $experience->display_order }}</td>
                             <td>{{ $experience->status }}</td>
                             <td>
                                 @can('update', $experience)

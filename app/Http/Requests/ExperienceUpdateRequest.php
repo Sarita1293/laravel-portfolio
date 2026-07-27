@@ -32,6 +32,7 @@ class ExperienceUpdateRequest extends FormRequest
                     'location'          => 'nullable|string|max:255',
                     'description'       => 'required|string',
                     'roles_and_responsibilities' => 'required|string',
+                    'display_order'     => 'required|integer|min:1',
                     'status'            => 'required|boolean',
                 ];
     }

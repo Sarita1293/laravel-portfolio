@@ -30,8 +30,9 @@
                         <th>Image</th>
                         <th>Project Name</th>
                         <th>Project Date</th>
-                         <th>Role</th>
+                        <th>Role</th>
                         <th>Skills</th>
+                        <th>Display Order</th>
                         <th>Status</th>
                         <th width="170">Action</th>
                     </tr>
@@ -44,7 +45,7 @@
 
                             <td>{{ $project->id }}</td>
                             <td>
-                                <img src="{{ asset('uploads/projects/' . $project->thumbnail_image) }}"
+                                <img src="{{ asset('storage/'.$project->thumbnail_image) }}"
                                     width="60"
                                     height="60"
                                     style="object-fit:cover;">
@@ -67,6 +68,7 @@
                                 @endforeach
 
                             </td>
+                            <td>{{ $project->display_order }}</td>
                             <td>
                                 @if($project->status)
                                     <span class="badge badge-success">Active</span>
