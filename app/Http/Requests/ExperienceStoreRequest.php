@@ -42,6 +42,8 @@ class ExperienceStoreRequest extends FormRequest
 
         'roles_and_responsibilities' => 'required|string',
 
+        'display_order' => 'required|integer|min:1',
+
         'status' => 'required|boolean',
         ];
     }
