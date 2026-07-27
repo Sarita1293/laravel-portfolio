@@ -18,7 +18,7 @@ class SkillSeeder extends Seeder
         $backend = SkillCategory::where('name', 'Backend')->first();
         $frontend = SkillCategory::where('name', 'Frontend')->first();
         $database = SkillCategory::where('name', 'Database')->first();
-        $cloudDevOps = SkillCategory::where('name', 'Cloud/DevOps')->first();
+        $cloudDevOps = SkillCategory::where('name', 'Cloud & DevOps')->first();
         $api = SkillCategory::where('name', 'API')->first();
         $operatingSystem = SkillCategory::where('name', 'Operating Systems')->first();    
         $tool = SkillCategory::where('name', 'Tools')->first();

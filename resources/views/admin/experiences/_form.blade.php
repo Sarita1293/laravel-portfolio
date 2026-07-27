@@ -96,7 +96,19 @@
 
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-6">
+
+                            <label>Display Order</label>
+
+                            <input
+                                type="text"
+                                name="display_order"
+                                class="form-control"
+                                value="{{ old('display_order', $experience->display_order ?? '') }}">
+
+                        </div>
+
+                        <div class="col-md-6">
 
                             <label>Status</label>
 

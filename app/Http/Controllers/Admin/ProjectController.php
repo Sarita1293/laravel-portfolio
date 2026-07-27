@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Skill;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -34,14 +35,25 @@ class ProjectController extends Controller
             'project_date' => 'required|date',
             'role' => 'required',
             'thumbnail_image' => 'required|image',
+            'display_order' => 'required|integer|min:1',
+            'status' => 'required|boolean',
             'skills' => 'required|array',
         ]);
         
+        // $imagePath = $request->file('thumbnail_image')
+        //                  ->store('projects','public');
+
         $image = $request->file('thumbnail_image');
 
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $imageName = time() . '_' . $image->getClientOriginalName();
 
-        $image->move(public_path('uploads/projects'), $imageName);
+        $imagePath = $image->storeAs(
+            'projects',
+            $imageName,
+            'public'
+        );
+
+        dd($request->display_order);
 
         $project = Project::create([
 
@@ -52,7 +64,10 @@ class ProjectController extends Controller
             'role' => $request->role,
             'github_url' => $request->github_url,
             'live_url' => $request->live_url,
-            'thumbnail_image' => $imageName,
+            'thumbnail_image' => $imagePath,
+            'display_order' => $request->display_order,
+            'status' => $request->status,
+            
         ]);
 
         $project->skills()->sync($request->skills);
@@ -80,19 +95,28 @@ class ProjectController extends Controller
             'project_date' => 'required|date',
             'role' => 'required',
             'thumbnail_image' => 'nullable|image',
+            'display_order' => 'required|integer|min:1',
+            'status' => 'required|boolean',
             'skills' => 'required|array',
         ]);
+
+        
 
         if ($request->hasFile('thumbnail_image')) {
 
             $image = $request->file('thumbnail_image');
 
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $imageName = time() . '_' . $image->getClientOriginalName();
 
-            $image->move(public_path('uploads/projects'), $imageName);
+            $imagePath = $image->storeAs(
+                'projects',
+                $imageName,
+                'public'
+            );
         }
         else{
-              $imageName = $project->thumbnail_image;
+
+            $imagePath = $project->thumbnail_image;
         }
         $project->update([
 
@@ -103,7 +127,9 @@ class ProjectController extends Controller
             'role' => $request->role,
             'github_url' => $request->github_url,
             'live_url' => $request->live_url,
-            'thumbnail_image' => $imageName,
+            'thumbnail_image' => $imagePath,
+            'display_order' => $request->display_order,
+            'status' => $request->status,
         ]);
 
         $project->skills()->sync($request->skills);

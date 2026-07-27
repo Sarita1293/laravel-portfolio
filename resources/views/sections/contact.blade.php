@@ -47,7 +47,7 @@
           </div>
 
           <div class="col-lg-6 text-center">
-            <img src="{{ asset('assets/img/portfolio/contact.png') }}" class="img-fluid w-100 contact-img">
+            <img src="{{ asset('storage/projects/contact.png') }}" class="img-fluid w-100 contact-img">
           </div>
 
         </div>

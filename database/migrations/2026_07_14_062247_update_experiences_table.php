@@ -11,12 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('experiences', function (Blueprint $table) {
-             $table->renameColumn(
-            'roles and responsibilities',
-            'roles_and_responsibilities'
-            );
-        });
+        //
     }
 
     /**
@@ -24,11 +19,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('experiences', function (Blueprint $table) {
-             $table->renameColumn(
-            'roles_and_responsibilities',
-            'roles and responsibilities'
-            );
-        });
+        //
     }
 };

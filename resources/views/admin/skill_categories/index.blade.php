@@ -29,6 +29,7 @@
                         <th>ID</th>
                         <th>Category Name</th>
                         <th> Icon </th>
+                        <th> Display Order </th>
                         <th>Status</th>
                         <th width="170">Action</th>
                     </tr>
@@ -39,6 +40,7 @@
                             <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
                             <td>{{ $category->icon }}</td>
+                            <td>{{ $category->display_order }}</td>
                             <td>{{ $category->status }}</td>
                             <td>
                                 @can('update', $category)

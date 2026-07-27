@@ -33,7 +33,7 @@
                     <br>
 
                     <button class="btn btn-primary">
-                        Save Service
+                        Save Category
                     </button>
                     <a href="{{ route('admin.skill-categories.index') }}" class="btn btn-secondary">
                         Cancel
