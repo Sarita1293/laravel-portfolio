@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
             PersonalDetailsSeeder::class,
             SkillCategorySeeder::class,
             SkillSeeder::class,
+            SkillCategoryMappingSeeder::class,
+            CurrentLearningSeeder::class,
             ProjectSeeder::class,
             EducationSeeder::class,
             ExperienceSeeder::class,
