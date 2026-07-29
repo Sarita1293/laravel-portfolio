@@ -54,10 +54,25 @@ class SkillSeeder extends Seeder
             ],
 
             [
+                'skill_category_id' => $backend->id,
+                'name' => 'AJAX',
+                'percentage' => 85,
+                'display_order' => 4,
+                'status' => true,
+            ],
+            [
+                'skill_category_id' => $backend->id,
+                'name' => 'JSON',
+                'percentage' => 85,
+                'display_order' => 5,
+                'status' => true,
+            ],
+
+            [
                 'skill_category_id' => $database->id,
                 'name' => 'MySQL',
                 'percentage' => 90,
-                'display_order' => 4,
+                'display_order' => 6,
                 'status' => true,
             ],
 
@@ -65,7 +80,15 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $database->id,
                 'name' => 'PostgreSQL',
                 'percentage' => 75,
-                'display_order' => 5,
+                'display_order' => 7,
+                'status' => true,
+            ],
+
+            [
+                'skill_category_id' => $database->id,
+                'name' => 'SQL Server',
+                'percentage' => 70,
+                'display_order' => 8,
                 'status' => true,
             ],
 
@@ -73,7 +96,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $frontend->id,
                 'name' => 'HTML5',
                 'percentage' => 95,
-                'display_order' => 6,
+                'display_order' => 9,
                 'status' => true,
             ],
 
@@ -81,7 +104,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $frontend->id,
                 'name' => 'CSS3',
                 'percentage' => 90,
-                'display_order' => 7,
+                'display_order' => 10,
                 'status' => true,
             ],
 
@@ -89,7 +112,21 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $frontend->id,
                 'name' => 'JQuery',
                 'percentage' => 85,
-                'display_order' => 8,
+                'display_order' => 11,
+                'status' => true,
+            ],
+            [
+                'skill_category_id' => $frontend->id,
+                'name' => 'Bootstrap',
+                'percentage' => 90,
+                'display_order' => 12,
+                'status' => true,
+            ],
+            [
+                'skill_category_id' => $frontend->id,
+                'name' => 'Vue.js',
+                'percentage' => 70,
+                'display_order' => 13,
                 'status' => true,
             ],
 
@@ -97,7 +134,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $api->id,
                 'name' => 'REST API',
                 'percentage' => 85,
-                'display_order' => 9,
+                'display_order' => 14,
                 'status' => true,
             ],
 
@@ -105,7 +142,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $cloudDevOps->id,
                 'name' => 'Docker',
                 'percentage' => 70,
-                'display_order' => 10,
+                'display_order' => 15,
                 'status' => true,
             ],
 
@@ -113,7 +150,15 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $cloudDevOps->id,
                 'name' => 'AWS',
                 'percentage' => 65,
-                'display_order' => 11,
+                'display_order' => 16,
+                'status' => true,
+            ],
+
+            [
+                'skill_category_id' => $cloudDevOps->id,
+                'name' => 'CICD',
+                'percentage' => 60,
+                'display_order' => 17,
                 'status' => true,
             ],
 
@@ -121,7 +166,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $versionControl->id,
                 'name' => 'Git',
                 'percentage' => 90,
-                'display_order' => 12,
+                'display_order' => 18,
                 'status' => true,
             ],
 
@@ -129,7 +174,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $versionControl->id,
                 'name' => 'GitHub',
                 'percentage' => 90,
-                'display_order' => 13,
+                'display_order' => 19,
                 'status' => true,
             ],
 
@@ -137,7 +182,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $versionControl->id,
                 'name' => 'SVN',
                 'percentage' => 75,
-                'display_order' => 14,
+                'display_order' => 20,
                 'status' => true,
             ],
 
@@ -145,7 +190,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $operatingSystem->id,
                 'name' => 'Linux',
                 'percentage' => 70,
-                'display_order' => 15,
+                'display_order' => 21,
                 'status' => true,
             ],
 
@@ -153,7 +198,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $operatingSystem->id,
                 'name' => 'Windows',
                 'percentage' => 90,
-                'display_order' => 16,
+                'display_order' => 22,
                 'status' => true,
             ],
 
@@ -161,7 +206,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $tool->id,
                 'name' => 'Postman',
                 'percentage' => 90,
-                'display_order' => 17,
+                'display_order' => 23,
                 'status' => true,
             ],
 
@@ -169,7 +214,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $projectManagement->id,
                 'name' => 'JIRA',
                 'percentage' => 80,
-                'display_order' => 18,
+                'display_order' => 24,
                 'status' => true,
             ],
 
@@ -177,7 +222,7 @@ class SkillSeeder extends Seeder
                 'skill_category_id' => $ideEditor->id,
                 'name' => 'VS Code',
                 'percentage' => 95,
-                'display_order' => 19,
+                'display_order' => 25,
                 'status' => true,
             ],
 

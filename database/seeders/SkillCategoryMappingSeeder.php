@@ -35,7 +35,7 @@ class SkillCategoryMappingSeeder extends Seeder
                 'SQL Server',
             ],
 
-            'DevOps' => [
+            'Cloud & DevOps' => [
                 'Docker',
                 'AWS',
                 'CICD',
@@ -60,6 +60,10 @@ class SkillCategoryMappingSeeder extends Seeder
         foreach ($mapping as $categoryName => $skills) {
 
             $category = SkillCategory::where('name', $categoryName)->first();
+
+            if (!$category) {
+                throw new Exception("Category '{$categoryName}' not found.");
+            }
 
             Skill::whereIn('name', $skills)
                 ->update([
