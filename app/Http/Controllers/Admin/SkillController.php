@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Skill;
 use App\Http\Requests\SkillStoreRequest;
 use App\Http\Requests\SkillUpdateRequest;
-use App\Models\Skillcategory;
+use App\Models\SkillCategory;
 
 
 class SkillController extends Controller
