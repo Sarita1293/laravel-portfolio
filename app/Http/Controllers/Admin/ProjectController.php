@@ -80,7 +80,7 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         $this->authorize('update', $project);
-        $skills = skill::all();
+        $skills = Skill::all();
         return view('admin.projects.edit', compact('project', 'skills'));
     }
 
