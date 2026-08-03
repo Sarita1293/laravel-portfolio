@@ -40,8 +40,7 @@ class ProjectController extends Controller
             'skills' => 'required|array',
         ]);
         
-        // $imagePath = $request->file('thumbnail_image')
-        //                  ->store('projects','public');
+
 
         $image = $request->file('thumbnail_image');
 
@@ -53,7 +52,7 @@ class ProjectController extends Controller
             'public'
         );
 
-        dd($request->display_order);
+    
 
         $project = Project::create([
 
