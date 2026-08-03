@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\skill;
+use App\Models\Skill;
 use App\Http\Requests\SkillStoreRequest;
 use App\Http\Requests\SkillUpdateRequest;
 use App\Models\Skillcategory;
@@ -17,8 +17,8 @@ class SkillController extends Controller
      */
     public function index()
     {
-        $this->authorize('viewAny', skill::class);
-        $skills = skill::where('status',true)->get();
+        $this->authorize('viewAny', Skill::class);
+        $skills = Skill::where('status',true)->get();
 
         return view('admin.skills.index', compact('skills'));
     }
@@ -41,8 +41,8 @@ class SkillController extends Controller
      */
     public function store(SkillStoreRequest $request)
     {
-        $this->authorize('create', skill::class);
-        skill::create($request->validated());
+        $this->authorize('create', Skill::class);
+        Skill::create($request->validated());
         return redirect()->route('admin.skills.index')->with('success','Skill Created Successfully');
 
     }
@@ -58,7 +58,7 @@ class SkillController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(skill $skill)
+    public function edit(Skill $skill)
     {
         $this->authorize('update', $skill);
          $skillCategories = SkillCategory::where('status', true)
@@ -71,7 +71,7 @@ class SkillController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(SkillStoreRequest $request, skill $skill)
+    public function update(SkillStoreRequest $request, Skill $skill)
     {
         $this->authorize('update', $skill);
         $skill->update($request->validated());
@@ -82,7 +82,7 @@ class SkillController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(skill $skill)
+    public function destroy(Skill $skill)
     {
         $this->authorize('delete', $skill);
         $skill->delete();

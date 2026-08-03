@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ResumeDownload;
 use Illuminate\Support\Carbon;
-use App\Models\personalDetail;
+use App\Models\PersonalDetail;
 
 class ResumeController extends Controller
 {
     public function download()
     {
 
-        $personalDetail = personalDetail::first();
+        $personalDetail = PersonalDetail::first();
 
         if (!$personalDetail || !$personalDetail->resume_file) {
             abort(404, 'Resume not found.');

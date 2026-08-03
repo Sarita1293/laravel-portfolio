@@ -42,7 +42,7 @@ Route::prefix('admin')
         Route::resource('skills', SkillController::class);
 
         // Personal Details
-        Route::resource('personalDetails', personalDetailsController::class);
+        Route::resource('personalDetails', PersonalDetailsController::class);
 
         // Education
         Route::resource('educations', EducationController::class);

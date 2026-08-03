@@ -7,15 +7,15 @@ use App\Models\PersonalDetail;
 use App\Http\Requests\UpdatePersonalDetailRequest;
 
 
-class personalDetailsController extends Controller
+class PersonalDetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $this->authorize('viewAny', personalDetail::class);
-        $details = personalDetail::all();
+        $this->authorize('viewAny', PersonalDetail::class);
+        $details = PersonalDetail::all();
 
          return view('admin.personalDetails.index', compact('details'));
     }
@@ -25,7 +25,7 @@ class personalDetailsController extends Controller
      */
     public function create()
     {
-        $this->authorize('create', personalDetail::class);
+        $this->authorize('create', PersonalDetail::class);
         return view('admin.personalDetails.create');
     }
 
