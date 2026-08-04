@@ -1,0 +1,23 @@
+Copyright (c) 2026 Sarita Pal
+
+This portfolio contains original work developed by Sarita Pal, including:
+
+- Laravel application development
+- Backend implementation
+- Database schema design and implementation
+- Docker containerization
+- GitHub Actions CI/CD pipeline configuration
+- AWS ECR and EC2 deployment configuration
+- Project documentation
+- Original project content
+
+This project also incorporates third-party open-source software,
+frameworks, templates, libraries, and assets, including Laravel,
+AdminLTE, Bootstrap, and other packages.
+
+All third-party software, templates, and assets remain the property of
+their respective copyright holders and are used according to their
+respective licenses.
+
+No ownership is claimed over third-party software, frameworks, or
+design assets.

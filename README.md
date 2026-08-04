@@ -70,12 +70,18 @@ The application is containerized using Docker Compose with PHP-FPM, Nginx, and M
 - Docker Compose
 - Nginx
 - PHP-FPM
-
-## Planned Deployment
-
 - GitHub Actions
+- Amazon ECR
 - AWS EC2
-- HTTPS
+
+## Deployment
+
+- GitHub Actions CI/CD
+- Docker Image Build
+- Amazon ECR
+- AWS EC2
+- Nginx Reverse Proxy
+- HTTPS (Future Enhancement)
 ---
 
 # 🐳 Docker Setup
@@ -184,23 +190,142 @@ http://localhost
 ```
 ---
 
+# CI/CD Pipeline
+
+The project uses GitHub Actions for automated Docker image validation and deployment workflow.
+
+Pipeline Flow:
+
+1. Developer pushes code to GitHub
+2. GitHub Actions triggers workflow
+3. Docker image is built and validated
+4. Image is pushed to Amazon ECR
+5. EC2 pulls latest Docker image
+6. Application runs using Docker Compose
+
+---
+
 # Screenshots
 
 ## Portfolio Home Page
 
-![Portfolio Home](screenshots/home.png)
+![Home](screenshots/home.png)
+
+## Portfolio About Page
+
+![About](screenshots/about.png)
+
+## Skills
+
+![Skills](screenshots/skills.png)
+
+## Projects
+
+![Projects](screenshots/projects.png)
+
+## Experience
+
+![Experience](screenshots/experience.png)
+
+## Services
+
+![Services](screenshots/services.png)
+
+## Current Learnings
+
+![Current Learnings](screenshots/learnings.png)
+
+## FAQ
+
+![FAQ](screenshots/faq.png)
+
+## CONTACT
+
+![Contact](screenshots/contact.png)
 
 
-## Admin Dashboard
 
-![Admin Dashboard](screenshots/admin-dashboard.png)
+## Admin - Project Management
+
+![Admin Dashboard](screenshots/portfolio-admin-dashboard.png)
+
+## Admin Showlist
+
+![Admin Dashboard Showlist](screenshots/portfolio-admin-dashboard-showlist.png)
+
+## Admin Profile
+
+![Admin Profile](screenshots/portfolio-admin-profile.png)
+
+## Admin Project
+
+![Admin Project](screenshots/portfolio-admin-project.png)
+
+## Admin Edit Project
+
+![Admin Project Edit](screenshots/portfolio-admin-editProject.png)
+
+## Admin Skills
+
+![Admin Skills](screenshots/portfolio-admin-skills.png)
+
+## Admin Edit Skills
+
+![Admin Skills Edit](screenshots/portfolio-admin-skillEdit.png)
+
+
+## Admin Skill Category
+
+![Admin Skill Category](screenshots/portfolio-admin-skillcategory.png)
+
+
+## Admin Experience
+
+![Admin Experience](screenshots/portfolio-admin-experience.png)
+
+
+## Admin Education
+
+![Admin Education](screenshots/portfolio-admin-education.png)
+
+## Admin Learnings
+
+![Admin Learnings](screenshots/portfolio-admin-currentLearnings.png)
+
+
+## Admin Service
+
+![Admin Service](screenshots/portfolio-admin-services.png)
+
+
+## Admin workflow
+
+![CICD workflow](screenshots/workflow.png)
+
+
+## AWS EC2 Instance
+
+![AWS EC2 Instance](screenshots/portfolio-AWS-EC2.png)
+
+
+## AWS ECR Image
+
+![AWS ECR Image](screenshots/portfolio-AWS-ECR-Image.png)
+
+
+## Docker Terminal EC2
+
+![Docker Terminal EC2](screenshots/docker-terminal-ec2.png)
+
 
 
 ## Future Improvements
 
-- GitHub Actions (CI/CD)
-- AWS EC2 Deployment
-- Domain & HTTPS
+- Configure custom domain
+- Enable HTTPS using SSL certificate
+- Add automated database backup
+- Add monitoring using Prometheus and Grafana
+- Implement Redis caching
 
 ---
 
@@ -219,3 +344,13 @@ Full Stack PHP Developer
 - Git
 - AWS
 
+## Acknowledgements
+
+This project incorporates third-party open-source software and assets.
+
+- Laravel Framework
+- AdminLTE
+- Bootstrap
+- Other frontend libraries as included in the project
+
+All third-party components remain subject to their respective licenses.
