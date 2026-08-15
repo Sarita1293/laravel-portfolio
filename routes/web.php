@@ -14,11 +14,20 @@ use App\Http\Controllers\Admin\FAQController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\CurrentLearningController;
 use App\Http\Controllers\ResumeController;
+use App\Http\Controllers\GoogleAuthController;
+
 
 
 
 Route::get('/', [HomeController::class, 'index']);
 
+
+Route::get('/auth/google', [GoogleAuthController::class, 'redirectToGoogle'])
+    ->name('google.login');
+
+
+Route::get('/auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback'])
+    ->name('google.callback');
 
 Route::prefix('admin')
     ->name('admin.')

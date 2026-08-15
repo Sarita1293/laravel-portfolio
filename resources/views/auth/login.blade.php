@@ -42,6 +42,14 @@
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
+
+            
+        </div>
+        <div class="flex items-center justify-end mt-4">
+            <a href="{{ route('google.login') }}"
+            class="w-full inline-flex justify-center items-center px-4 py-2 mt-4 border border-gray-300 rounded-md">
+                Login with Google
+            </a>
         </div>
     </form>
 </x-guest-layout>

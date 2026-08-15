@@ -43,6 +43,8 @@ The application is containerized using Docker Compose with PHP-FPM, Nginx, and M
 - PHP 8.2
 - Laravel 12
 - Laravel Blade
+- Laravel Socialite
+- Laravel Breeze
 
 ## Frontend
 
@@ -73,6 +75,7 @@ The application is containerized using Docker Compose with PHP-FPM, Nginx, and M
 - GitHub Actions
 - Amazon ECR
 - AWS EC2
+- Redis
 
 ## Deployment
 
@@ -82,6 +85,7 @@ The application is containerized using Docker Compose with PHP-FPM, Nginx, and M
 - AWS EC2
 - Nginx Reverse Proxy
 - HTTPS (Future Enhancement)
+
 ---
 
 # 🐳 Docker Setup
@@ -91,6 +95,7 @@ The application is fully containerized using Docker Compose.
 - **app** - PHP 8.2 FPM running the Laravel application
 - **nginx** - Web server
 - **mysql** - MySQL 8 database
+- **redis** - Redis cache service
 
 ---
 
@@ -317,7 +322,47 @@ Pipeline Flow:
 
 ![Docker Terminal EC2](screenshots/docker-terminal-ec2.png)
 
+---
 
+## 🔐 Authentication & Authorization
+
+The application uses Laravel Breeze and Laravel Socialite for authentication.
+
+### Authentication Features
+
+- Email/password authentication
+- Google OAuth login
+- Remember Me functionality
+- Forgot password
+- Password reset
+- Logout
+- Session-based authentication
+- Role-based access control
+
+### Google OAuth
+
+Google authentication is implemented using Laravel Socialite.
+
+OAuth credentials are stored in environment variables and are not committed to the repository.
+
+Required environment variables:
+
+```env
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_REDIRECT_URI=
+```
+---
+
+## Caching
+
+Redis is configured as the application's cache backend.
+
+Laravel's cache abstraction is used so frequently accessed data can be cached and database queries can be reduced.
+
+Redis configuration is provided through environment variables and Docker Compose.
+
+---
 
 ## Future Improvements
 
